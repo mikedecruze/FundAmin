@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fundamin-demo
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: npm test
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 22
